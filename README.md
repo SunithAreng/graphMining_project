@@ -1,22 +1,21 @@
-# Instructions for running this program in Eclipse
+# NINENINE Graph Manipulation Challenge
 
-### 1. Cloning to Eclipse
-Go to the GitHub repository https://github.com/MSCI240-f2021/final-project-2021f-SunithAreng.  
-Click on the green coloured box "code". Then **Code > Clone > SSH ** and copy the SSH code.
-Make sure access has been obtained for the GitHub repository. Go to Eclipse, go to git view and select clone "git repository" option. The SSH code should be already pasted there and if not then manually paste the SSH code in the URI box. The rest should be auto-filled and then hit next and finish.
+This repository contains the solution to a programming challenge undertaken as part of the Final Project from CODECHEF. The challenge involves manipulating a graph representing a map to create a new graph with specific properties.
 
-### 2. Importing as local Java Project
-Once the repository has been successfully cloned to Eclipse, right click on the project name **final-project-2021f-SunithAreng [main] **, select **Import Projects...** and click finish. This will create a import the repository as a local java project which can be found in the Package Explorer.
+## Problem Description
 
-### 3. Convert to Maven Project
-In this step, check if the project shows any red box beside the name of the project in package explorer in Eclipse. This is due to the Maven nature of the project, if there is a red box then right click on the project name **final-project-2021f-SunithAreng** and select  ** Configure > Convert to Maven Project** and hit finish. If the java project is already a Maven project then this step can be ignored.
+The challenge requires manipulating an undirected graph representing a map by removing an edge and placing it elsewhere in the graph, ensuring that the graph remains connected throughout the process. The goal is to create a new graph with the same number of nodes and edges, where the count of vertices having a particular degree remains the same as the original graph.
 
-### 4. Create build.xml file
-Next, check if the project has a build.xml file. If such file exists then this step can be ignored. If no such file exists then right click on the project name **final-project-2021f-SunithAreng** and select ** Export > General > Ant Buildfiles > Next > Finish **. This will create a build file that enable all the java programs to run.
+## Solution Overview
 
+The solution is implemented in Java and utilizes an object called IntGraphList to represent the graph with an adjacency list. The IntGraphList object extends an abstract class called IntGraph, which provides methods for graph manipulation. The program includes 36 unit tests to validate the solution methods and handle unexpected inputs.
 
-### 5. Running the program
-Go to the project name **final-project-2021f-SunithAreng**. Click on the ** Code > (default package) > GraphMain ** and run using the green play button. The output will  be shown in the console. This program runs the main method, object IntGraphList class and uses the input.txt file. 
+## Running the Program
 
-### 6. Running the test cases
-Go to the project name **final-project-2021f-SunithAreng**. Click on the ** test > (default package) > TestIntGraphList ** and run using the green play button. This should automatically open the JUnit tab at the left side replacing the Package Explorer tab. All the 35 tests should pass. 
+To run the program, provide an input text file containing details of the original graph, including the number of vertices, edges, and edge connections. The program will output the edge that should be removed and where it should be placed to create a valid new graph. Additionally, it will display the total number of possible graphs with the same set of degrees as the original graph.
+
+## Notes
+
+- The program is sensitive to the input text file format and requires accurate graph details.
+- Due to the nature of the solution, the program may have a potentially high runtime, especially for larger graphs.
+- Care has been taken to handle potential double counts and reduce program complexity.
